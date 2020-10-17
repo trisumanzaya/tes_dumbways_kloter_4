@@ -45,7 +45,7 @@
 
 - No. 4B - Modal Add Genre
     <div align="center">
-        <img width="860" src="#">
+        <img width="860" src="4b add genre.png">
     </div>
 
 - No. 4B - Detail
