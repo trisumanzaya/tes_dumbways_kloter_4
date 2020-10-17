@@ -99,7 +99,7 @@ if (isset($_POST["submit-singer"])) {
             </div>
             <select name="id_genre" id="id_genre">
             <?php
-              // getGenre();
+              getGenre();
             ?>
             </select>
             <!-- <input type="text" class="form-control" placeholder="Genre" aria-label="Genre" aria-describedby="basic-addon1" name="id_genre"> -->
@@ -110,7 +110,7 @@ if (isset($_POST["submit-singer"])) {
             </div>
               <select name="id_singer" id="id_singer">
               <?php
-                // getSinger();
+                getSinger();
               ?>
               </select>
             <!-- <input type="text" class="form-control" placeholder="Singer" aria-label="Singer" aria-describedby="basic-addon1" name="id_singer"> -->
