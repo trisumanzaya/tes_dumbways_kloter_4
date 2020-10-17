@@ -35,17 +35,17 @@
 
 - No. 4B - Modal Add Music
     <div align="center">
-        <img width="860" src="#">
+        <img width="860" src="./img/4b%20add%20musik.png">
     </div>
 
 - No. 4B - Modal Add Singer
     <div align="center">
-        <img width="860" src="#">
+        <img width="860" src="./img/4b%20add%20singer.png">
     </div>
 
 - No. 4B - Modal Add Genre
     <div align="center">
-        <img width="860" src="4b add genre.png">
+        <img width="860" src="./img/4b%20add%20genre.png">
     </div>
 
 - No. 4B - Detail
