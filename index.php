@@ -1,7 +1,7 @@
 <?php
 require 'functions.php';
-$datas = query("SELECT music.title,music.durasi, singger.name As nama_singer, music.photo,music.deskripsi FROM music
-RIGHT JOIN singger
+$datas = query("SELECT music.id, music.title,music.durasi, singger.name As nama_singer, music.photo,music.deskripsi FROM music
+JOIN singger
 	ON music.id_singer= singger.id;");
 
 if (isset($_POST["submit-genre"])) {
@@ -62,7 +62,7 @@ if (isset($_POST["submit-singer"])) {
             <h5 class="card-title"><?= $data['title']; ?></h5>
             <p><?= $data['nama_singer']; ?></p>
           </div>
-          <a href="#" class="btn btn-primary w-100">Detail</a>
+          <a href= <?="./detail.php?id=".$data['id']; ?> class="btn btn-primary w-100">Detail</a>
         </div>
       </div>
 
@@ -97,13 +97,23 @@ if (isset($_POST["submit-singer"])) {
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon1">Genre</span>
             </div>
-            <input type="text" class="form-control" placeholder="Genre" aria-label="Genre" aria-describedby="basic-addon1" name="id_genre">
+            <select name="id_genre" id="id_genre">
+            <?php
+              // getGenre();
+            ?>
+            </select>
+            <!-- <input type="text" class="form-control" placeholder="Genre" aria-label="Genre" aria-describedby="basic-addon1" name="id_genre"> -->
           </div>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon1">Singer</span>
             </div>
-            <input type="text" class="form-control" placeholder="Singer" aria-label="Singer" aria-describedby="basic-addon1" name="id_singer">
+              <select name="id_singer" id="id_singer">
+              <?php
+                // getSinger();
+              ?>
+              </select>
+            <!-- <input type="text" class="form-control" placeholder="Singer" aria-label="Singer" aria-describedby="basic-addon1" name="id_singer"> -->
           </div>
           <div class="input-group mb-3">
             <div class="input-group-prepend">

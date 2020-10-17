@@ -16,6 +16,30 @@ function query ($query) {
 
 }
 
+function getGenre () {
+	global $conn;
+	$query = "SELECT * FROM genre";
+	$result = mysqli_query ($conn, $query);
+	$rows = [];
+	while ($row = mysqli_fetch_array($result)) {
+		echo "<option value=". $row['id'].">" . $row['name']. "</option>";
+	}
+	return $rows;
+
+}
+
+function getSinger () {
+	global $conn;
+	$query = "SELECT * FROM singger";
+	$result = mysqli_query ($conn, $query);
+	$rows = [];
+	while ($row = mysqli_fetch_array($result)) {
+		echo "<option value=". $row['id'].">" . $row['name']. "</option>";
+	}
+	return $rows;
+
+}
+
 
 function insertgenre($genre)
 {
